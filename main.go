@@ -12,12 +12,12 @@ func main() {
 	// fill the parameters according to https://www.budgetsms.net/sms-http-api/test-sms/
 	// details regarding account can be found here https://www.budgetsms.net/controlpanel/api-details/
 	detail := details{
-		"kartbites",
-		"15433",
-		"4c072defb2bdf7f54633dc8e71fa94ff",
+		"username",
+		"userid",
+		"handle",
 		msg,
 		"kartbites",
-		"+918653149116",
+		"to",
 		"",
 		0,
 		0,
