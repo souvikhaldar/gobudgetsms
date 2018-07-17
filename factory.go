@@ -35,6 +35,5 @@ func buildURL(det Details) string {
 		Path:     "/sendsms",
 		RawQuery: fmt.Sprintf("username=%s&userid=%s&handle=%s&msg=%s&from=%s&to=%s&customid=%s&price=%d&mccmnc=%d&credit=%d", det.Username, det.Userid, det.Handle, createmsg(det.Msg), det.From, det.To, det.Customid, det.Price, det.Mccmnc, det.Credit),
 	}
-	fmt.Println("Final URL is", u.String())
 	return u.String()
 }
