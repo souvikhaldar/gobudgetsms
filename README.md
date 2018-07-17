@@ -4,7 +4,7 @@ This library is used to easily make use of the Budget SMS public API to send sms
 ## Getting Started
 Just insert the details according to the example provided below and get going. No dependencies are requied to use this lib, very lightweight.
 
-Demo working sample of this library can be found at https://www.youtube.com/edit?video_referrer=watch&video_id=D62KMuHezZg
+Demo working sample of this library can be found at https://youtu.be/D62KMuHezZg
 
 
 ![alt text](https://github.com/souvikhaldar/gobudgetsms/blob/master/Screen%20Shot%202018-07-17%20at%208.56.13%20PM.png)
