@@ -7,7 +7,7 @@ Just insert the details according to the example provided below and get going. N
 Demo working sample of this library can be found at https://www.youtube.com/edit?video_referrer=watch&video_id=D62KMuHezZg
 
 
-![alt text](https://github.com/souvikhaldar/gobudgetsms/blob/master/Screen%20Shot%202018-07-17%20at%208.51.18%20PM.png)
+![alt text](https://github.com/souvikhaldar/gobudgetsms/blob/master/Screen%20Shot%202018-07-17%20at%208.56.13%20PM.png)
 
 
 ### Prerequisites
