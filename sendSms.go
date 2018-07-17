@@ -6,7 +6,7 @@ import (
 )
 
 // SendSMS returns the response after requesting Budget SMS api and the error if any
-func SendSMS(detail Details, message string) (string, error) {
+func SendSMS(detail Details) (string, error) {
 	url := buildURL(detail)
 	res, er := http.Get(url)
 	if er != nil {
