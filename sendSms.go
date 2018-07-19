@@ -2,15 +2,12 @@ package gobudgetsms
 
 import (
 	"io/ioutil"
-	"log"
 	"net/http"
 )
 
 // SendSMS returns the response after requesting Budget SMS api and the error if any
 func SendSMS(details Details, message, to, from string) (string, error) {
-	log.Println("The detail recieved is ", details)
 	url := buildURL(details, message, to, from)
-	log.Println("The URL formed is ", url)
 	res, er := http.Get(url)
 	if er != nil {
 		return "", er
