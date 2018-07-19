@@ -26,7 +26,7 @@ Details regarding account can be found here https://www.budgetsms.net/controlpan
 
 ```
 // Set the credentials from your Budget SMS account, visit https://www.budgetsms.net/sms-http-api/send-sms/
-  detail := gobudgetsms.SetConfig("username","userid","handle","",0,0,0)
+  detail := gobudgetsms.SetConfig("username","userid","handle","customid",price,mccmnc,credit)
   message := "Hello Souvik!"
   res , err := gobudgetsms.SendSMS(detail,message,"+to","from")
   if err != nil {
