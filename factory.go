@@ -41,8 +41,8 @@ func buildURL(det Details, message, to, from string) string {
 }
 
 // SetConfig allows to enter the credentials of Budget sms account
-func SetConfig(Username, Userid, Handle, Customid string, Price, Mccmnc, Credit int) *Details {
-	detail := &Details{
+func SetConfig(Username, Userid, Handle, Customid string, Price, Mccmnc, Credit int) Details {
+	detail := Details{
 		Username,
 		Userid,
 		Handle,
