@@ -26,31 +26,25 @@ Details regarding account can be found here https://www.budgetsms.net/controlpan
 
 Fill the parameters according to https://www.budgetsms.net/sms-http-api/test-sms/
 ```
-detail := Details{
-
-	"username",
-	
-	"userid",
-	
-	"handle",
-	
-	"The message",
-	
-	"kartbites",
-	
-	"to",
-	
-	"",
-	
-	0,
-	
-	0,
-	
-	0,
-	
+// Just one function call to send the sms
+res , err := gobudgetsms.SendSMS(detail Details)
+if err != nil {
+	//handle error
 }
 
-res , err := gobudgetsms.SendSMS(detail)
+// An example of detail object
+detail := Details{
+	"username",	
+	"userid",	
+	"handle",	
+	"The message",
+	"from",
+	"to",
+	"",
+	0,
+	0,
+	0,
+}
 ```
 
 

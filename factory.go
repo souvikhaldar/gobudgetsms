@@ -19,6 +19,8 @@ type Details struct {
 	Credit   int
 }
 
+var detail Details
+
 func createmsg(msg string) string {
 	message := []rune(msg)
 	for i := 0; i < len(message); i++ {
@@ -28,12 +30,29 @@ func createmsg(msg string) string {
 	}
 	return string(message)
 }
-func buildURL(det Details) string {
+func buildURL(det Details, message, to, from string) string {
 	u := &url.URL{
 		Scheme:   "https",
 		Host:     "api.budgetsms.net",
 		Path:     "/sendsms",
-		RawQuery: fmt.Sprintf("username=%s&userid=%s&handle=%s&msg=%s&from=%s&to=%s&customid=%s&price=%d&mccmnc=%d&credit=%d", det.Username, det.Userid, det.Handle, createmsg(det.Msg), det.From, det.To, det.Customid, det.Price, det.Mccmnc, det.Credit),
+		RawQuery: fmt.Sprintf("username=%s&userid=%s&handle=%s&msg=%s&from=%s&to=%s&customid=%s&price=%d&mccmnc=%d&credit=%d", det.Username, det.Userid, det.Handle, createmsg(message), from, to, det.Customid, det.Price, det.Mccmnc, det.Credit),
 	}
 	return u.String()
+}
+
+// SetConfig allows to enter the credentials of Budget sms account
+func SetConfig(Username, Userid, Handle, Customid string, Price, Mccmnc, Credit int) *Details {
+	detail := &Details{
+		Username,
+		Userid,
+		Handle,
+		"",
+		"",
+		"",
+		"",
+		Price,
+		Mccmnc,
+		Credit,
+	}
+	return detail
 }
