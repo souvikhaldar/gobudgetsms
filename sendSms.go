@@ -8,7 +8,8 @@ import (
 
 // SendSMS returns the response after requesting Budget SMS api and the error if any
 func SendSMS(details Details, message, to, from string) (string, error) {
-	url := buildURL(detail, message, to, from)
+	log.Println("The detail recieved is ", details)
+	url := buildURL(details, message, to, from)
 	log.Println("The URL formed is ", url)
 	res, er := http.Get(url)
 	if er != nil {
