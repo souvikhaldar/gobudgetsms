@@ -23,16 +23,24 @@ go get github.com/souvikhaldar/gobudgetsms
 ## Example 
 
 Details regarding account can be found here https://www.budgetsms.net/controlpanel/api-details/
+Set the credentials from your Budget SMS account, visit https://www.budgetsms.net/sms-http-api/send-sms/
 
 ```
-// Set the credentials from your Budget SMS account, visit https://www.budgetsms.net/sms-http-api/send-sms/
-  detail := gobudgetsms.SetConfig("username","userid","handle","customid",price,mccmnc,credit)
-  message := "Hello Souvik!"
-  res , err := gobudgetsms.SendSMS(detail,message,"+to","from")
-  if err != nil {
-    //handle error
+  import (
+	  "log"
+
+	  "github.com/souvikhaldar/gobudgetsms"
+  )
+
+  func main() {
+	  conf := gobudgetsms.SetConfig("username","userid","handle","customid",price,mccmnc,credit)
+	  res, er := gobudgetsms.SendSMS(conf,message,"+to","from")
+	  if er != nil {
+		  log.Fatal(er.Error())
+	  }
+	  log.Print("The response after sending sms is ", res)
   }
-  fmt.Println("The response after sending sms is ",res)
+
 ```
 
 
